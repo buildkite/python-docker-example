@@ -3,5 +3,5 @@ steps:
   - name: ":python:"
     command: "py.test"
     plugins:
-      - docker-compose#v3.0.3:
+      - docker-compose#v3.7.0:
           run: app
