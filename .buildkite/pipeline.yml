@@ -7,4 +7,4 @@ steps:
       podSpec:
         containers:
         - image: python:latest
-          command: [.buildkite/steps/tests.sh]
+          command: [.buildkite/steps/test.sh]
