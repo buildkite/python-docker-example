@@ -8,3 +8,6 @@ steps:
         containers:
         - image: python:latest
           command: [.buildkite/steps/test.sh]
+  - test-collector:
+      files: "junit-*.xml"
+      format: "junit"
