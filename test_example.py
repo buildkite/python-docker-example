@@ -3,4 +3,3 @@ def incr(x):
 
 def test_incr():
     assert incr(3) == 4
-
