@@ -1,7 +1,10 @@
-
 steps:
-  - name: ":python:"
-    command: "py.test"
-    plugins:
-      - docker-compose#v3.7.0:
-          run: app
+- label: run pytest
+  agents:
+    queue: kubernetes
+  plugins:
+  - kubernetes:
+      podSpec:
+        containers:
+        - image: python:latest
+          command: [.buildkite/steps/tests.sh]
