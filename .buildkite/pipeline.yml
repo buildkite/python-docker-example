@@ -8,6 +8,9 @@ steps:
         containers:
         - image: python:latest
           command: [.buildkite/steps/test.sh]
+          envFrom:
+            - secretRef:
+                name: buildkite-analytics
   - test-collector:
       files: "junit-*.xml"
       format: "junit"
