@@ -1,7 +1,6 @@
-
 steps:
   - name: ":python:"
-    command: "py.test"
+    command: uv run py.test
     plugins:
       - docker-compose#v5.2.0:
           run: app

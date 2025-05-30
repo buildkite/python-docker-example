@@ -1,8 +1,5 @@
-FROM       python
-RUN        pip install pipenv
+FROM       ghcr.io/astral-sh/uv:python3.13-alpine
 COPY       . /app
 WORKDIR    /app
-RUN        pipenv install --deploy --dev
-ENV        SHELL=/bin/bash
-ENTRYPOINT ["pipenv", "run"]
-CMD        ["python"]
+RUN        uv sync
+CMD        ["uv", "run", "python"]
