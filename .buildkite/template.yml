@@ -1,5 +1,10 @@
-# Used by the 'Add to Buildkite' button in the readme
 name: "Python Docker Example"
+description: "An example pipeline that runs Python tests inside a Docker container using uv for dependency management."
+emoji: ":python:"
+color: "#EFF9FF"
+languages:
+  - "Python"
+  - "Docker"
 steps:
   - label: ":pipeline:"
     command: "buildkite-agent pipeline upload"
